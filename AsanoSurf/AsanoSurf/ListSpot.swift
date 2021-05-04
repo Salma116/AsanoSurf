@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ListSpot: View {
-    @ObservedObject var viewModel : ViewModel
+    @ObservedObject var viewModel : ViewModel = ViewModel()
     
     var body: some View {
-        List(viewModel.spots){
-            spot in Text(spot.name)
+//        List(viewModel.spots){
+//            spot in Text(spot.name)
+//        }
+        List{
+            ForEach(self.viewModel.spots, id:\.self){ spot in
+                Text(spot.name)
+            }
         }
     }
 }

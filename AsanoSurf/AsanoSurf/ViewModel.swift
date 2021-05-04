@@ -6,7 +6,7 @@
 //
 
 import Foundation
-extension ListSpot{
+
     class ViewModel: ObservableObject {
         var spots: [Spot] = []
         var dataProvider: DataProvider
@@ -17,4 +17,4 @@ extension ListSpot{
         }
    
     }
-}
+
