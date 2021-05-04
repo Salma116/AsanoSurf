@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Spot : Hashable {
+struct Spot : Hashable, Decodable {
     var image:String
     var name:String
     var location:String
