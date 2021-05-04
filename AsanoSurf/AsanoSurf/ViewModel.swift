@@ -13,7 +13,7 @@ import Foundation
         
         init (){
             self.dataProvider = DataProvider()
-            self.spots = dataProvider.getSpots()
+            self.spots = dataProvider.spots
         }
    
     }

@@ -11,16 +11,32 @@ struct ListSpot: View {
     @ObservedObject var viewModel : ViewModel = ViewModel()
     
     var body: some View {
-//        List(viewModel.spots){
-//            spot in Text(spot.name)
-//        }
-        List{
-            ForEach(self.viewModel.spots, id:\.self){ spot in
-                Text(spot.name)
+        NavigationView {
+            List{
+                ForEach(self.viewModel.spots, id:\.self){ sp in
+                    NavigationLink(
+                        destination: ContentView(spot: sp),
+                        label: {
+                            HStack {
+                                Image(sp.image)
+                                    .resizable()
+                                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                                    .scaledToFit()
+                                    .frame(height: 40)
+                                Text(sp.name)
+                            }
+                          
+                        })
+                       
+                   
+                }
             }
+            .navigationTitle("Liste des spots")
         }
     }
 }
+
+
 
 struct ListSpot_Previews: PreviewProvider {
     static var previews: some View {

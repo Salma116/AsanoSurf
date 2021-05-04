@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var spot: Spot
+    
     var body: some View {
         VStack {
-            Image("surf")
-            Text("AdaLand")
+            Image(spot.image)
+                .resizable()
+                .scaledToFit()
+                .frame(height:300)
+            
+            Text(spot.name)
                 .font(.title)
-            Text("28 rue du petit musc")
+            Text(spot.location)
                 .padding()
         }
     }
@@ -22,8 +29,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
-            ContentView()
+            ContentView(spot: Spot(image: "surf", name: "surf", location: "surf"))
         }
     }
 }

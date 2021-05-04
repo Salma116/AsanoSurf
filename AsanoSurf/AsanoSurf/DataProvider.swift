@@ -8,10 +8,9 @@
 import Foundation
 
 class DataProvider {
-    func getSpots() -> [Spot]{
-        return [
+    var spots:[Spot] = [
             Spot(image: "surf", name: "Surf", location: "8 rue des ecoles"),
             Spot(image: "plage", name: "letsgo", location: "9 rue des ecoles"),
             Spot(image: "beach", name: "trop cool", location: "10 rue des ecoles")]
-    }
+    
 }

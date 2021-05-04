@@ -11,7 +11,7 @@ import SwiftUI
 struct AsanoSurfApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ListSpot()
         }
     }
 }
