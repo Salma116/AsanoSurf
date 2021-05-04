@@ -13,6 +13,10 @@
 		38960C54263FEC6D0006FA14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38960C53263FEC6D0006FA14 /* Preview Assets.xcassets */; };
 		38960C5F263FEC6D0006FA14 /* AsanoSurfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38960C5E263FEC6D0006FA14 /* AsanoSurfTests.swift */; };
 		38960C6A263FEC6D0006FA14 /* AsanoSurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38960C69263FEC6D0006FA14 /* AsanoSurfUITests.swift */; };
+		38960CAC264138090006FA14 /* ListSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38960CAB264138090006FA14 /* ListSpot.swift */; };
+		38960CAE26413C760006FA14 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38960CAD26413C760006FA14 /* ViewModel.swift */; };
+		38960CB0264141EF0006FA14 /* SpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38960CAF264141EF0006FA14 /* SpotModel.swift */; };
+		38960CB2264144C80006FA14 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38960CB1264144C80006FA14 /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		38960C65263FEC6D0006FA14 /* AsanoSurfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsanoSurfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38960C69263FEC6D0006FA14 /* AsanoSurfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanoSurfUITests.swift; sourceTree = "<group>"; };
 		38960C6B263FEC6D0006FA14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38960CAB264138090006FA14 /* ListSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSpot.swift; sourceTree = "<group>"; };
+		38960CAD26413C760006FA14 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		38960CAF264141EF0006FA14 /* SpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotModel.swift; sourceTree = "<group>"; };
+		38960CB1264144C80006FA14 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				38960C50263FEC6D0006FA14 /* Assets.xcassets */,
 				38960C55263FEC6D0006FA14 /* Info.plist */,
 				38960C52263FEC6D0006FA14 /* Preview Content */,
+				38960CAB264138090006FA14 /* ListSpot.swift */,
+				38960CAD26413C760006FA14 /* ViewModel.swift */,
+				38960CAF264141EF0006FA14 /* SpotModel.swift */,
+				38960CB1264144C80006FA14 /* DataProvider.swift */,
 			);
 			path = AsanoSurf;
 			sourceTree = "<group>";
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38960CB2264144C80006FA14 /* DataProvider.swift in Sources */,
+				38960CAE26413C760006FA14 /* ViewModel.swift in Sources */,
 				38960C4F263FEC6B0006FA14 /* ContentView.swift in Sources */,
+				38960CB0264141EF0006FA14 /* SpotModel.swift in Sources */,
 				38960C4D263FEC6B0006FA14 /* AsanoSurfApp.swift in Sources */,
+				38960CAC264138090006FA14 /* ListSpot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
