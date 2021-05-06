@@ -8,17 +8,14 @@
 import Foundation
 
     class ViewModel: ObservableObject {
-        var spots: [Spot] = []
+       
         var dataProvider: DataProvider
-        var record: Record
-        var spots2: [Spot]
+        var spots: [Spot]
         
         
         init (){
             self.dataProvider = DataProvider()
-            self.spots = dataProvider.listspot
-            self.record = Record()
-            self.spots2 = record.records
+            self.spots = dataProvider.recordsListSpot
         }
    
     }

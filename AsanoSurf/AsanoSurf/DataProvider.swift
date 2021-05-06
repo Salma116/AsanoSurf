@@ -7,7 +7,8 @@
 
 import Foundation
 
-func load<T: Decodable>(_ filename: String) -> T {
+
+func load2(_ filename: String) -> Record{
     let data: Data
 
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
@@ -23,37 +24,20 @@ func load<T: Decodable>(_ filename: String) -> T {
 
     do {
         let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
+        return try decoder.decode(Record.self, from: data)
     } catch {
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+        fatalError("Couldn't parse \(filename) as \(Record.self):\n\(error)")
     }
-}
-
-func load2(_ fileName: String) -> [Spot] {
-    if let file = Bundle.main.url(forResource: fileName, withExtension: nil) {
-        do {
-            let data = try Data(contentsOf: file)
-            let decoder = JSONDecoder()
-            let jsonData = try decoder.decode(Record.self, from: data)
-            return jsonData.records
-        } catch {
-            print("error:\(error)")
-        }
-    }
-    return [Spot(image: "raté", name: "raté", location: "raté")]
+    
 }
 
 
 
 
 class DataProvider {
-    var spots:[Spot] = [
-            Spot(image: "surf", name: "Surf", location: "8 rue des ecoles"),
-            Spot(image: "plage", name: "letsgo", location: "9 rue des ecoles"),
-            Spot(image: "beach", name: "trop cool", location: "10 rue des ecoles")]
-    var listspot :[Spot] = load("surfData.json")
+    var recordsListSpot :[Spot] = load2("surfData2.json").records
 }
 
 struct Record : Decodable {
-    var records: [Spot] =  load2("surfData2.json")
+    var records: [Spot]
 }
