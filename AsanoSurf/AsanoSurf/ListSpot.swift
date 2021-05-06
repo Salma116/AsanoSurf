@@ -7,6 +7,22 @@
 
 import SwiftUI
 
+extension String {
+    
+    func loadImage() -> UIImage {
+        do {
+            guard let url = URL(string: self) else {
+                return UIImage()
+            }
+            let data:Data = try Data(contentsOf: url)
+            return UIImage(data: data) ?? UIImage()
+        } catch {
+            
+        }
+        return UIImage()
+    }
+}
+
 struct ListSpot: View {
     @ObservedObject var viewModel : ViewModel = ViewModel()
     
@@ -18,7 +34,7 @@ struct ListSpot: View {
                         destination: ContentView(spot: sp),
                         label: {
                             HStack {
-                                Image(sp.image)
+                                Image(uiImage : sp.image.loadImage())
                                     .resizable()
                                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                                     .scaledToFit()

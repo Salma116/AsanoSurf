@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(spot.image)
+            Image(uiImage : spot.image.loadImage())
                 .resizable()
                 .scaledToFit()
                 .frame(height:300)
