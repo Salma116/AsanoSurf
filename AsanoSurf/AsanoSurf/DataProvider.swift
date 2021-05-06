@@ -29,6 +29,19 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
 }
 
+func load2(_ fileName: String) -> [Spot] {
+    if let file = Bundle.main.url(forResource: fileName, withExtension: nil) {
+        do {
+            let data = try Data(contentsOf: file)
+            let decoder = JSONDecoder()
+            let jsonData = try decoder.decode(Record.self, from: data)
+            return jsonData.records
+        } catch {
+            print("error:\(error)")
+        }
+    }
+    return [Spot(image: "raté", name: "raté", location: "raté")]
+}
 
 
 
@@ -39,4 +52,8 @@ class DataProvider {
             Spot(image: "plage", name: "letsgo", location: "9 rue des ecoles"),
             Spot(image: "beach", name: "trop cool", location: "10 rue des ecoles")]
     var listspot :[Spot] = load("surfData.json")
+}
+
+struct Record : Decodable {
+    var records: [Spot] =  load2("surfData2.json")
 }

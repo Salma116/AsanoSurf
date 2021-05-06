@@ -13,7 +13,7 @@ struct ListSpot: View {
     var body: some View {
         NavigationView {
             List{
-                ForEach(self.viewModel.spots, id:\.self){ sp in
+                ForEach(self.viewModel.spots2, id:\.self){ sp in
                     NavigationLink(
                         destination: ContentView(spot: sp),
                         label: {

@@ -1,0 +1,20 @@
+{
+    "records": [
+    {
+            "name": "Reef Break",
+            "image": "<https://dl.airtable.com/ZuXJZ2NnTF40kCdBfTld_thomas-ashlock-64485-unsplash.jpg>",
+            "location": "Pipeline, Oahu, Hawaii"
+        },
+        {
+            "name": "Point Break",
+            "image": "<https://dl.airtable.com/e3QoP3cFSyykZJOvWGIy_cesar-couto-477018-unsplash%20(1).jpg>",
+            "location": "Supertubes, Jeffreys Bay, South Africa"
+        },
+        {
+            "name": "Hello Break",
+            "image": "<https://dl.airtable.com/ZuXJZ2NnTF40kCdBfTld_thomas-ashlock-64485-unsplash.jpg>",
+            "location": "Le Marais, Paris, France"
+        }
+    ]
+}
+

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00367EE72641921D00311DCE /* surfData.json in Resources */ = {isa = PBXBuildFile; fileRef = 00367EE62641921D00311DCE /* surfData.json */; };
+		007F96372642E4FA009777D0 /* surfData2.json in Resources */ = {isa = PBXBuildFile; fileRef = 007F96362642E4FA009777D0 /* surfData2.json */; };
 		38960C4D263FEC6B0006FA14 /* AsanoSurfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38960C4C263FEC6B0006FA14 /* AsanoSurfApp.swift */; };
 		38960C4F263FEC6B0006FA14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38960C4E263FEC6B0006FA14 /* ContentView.swift */; };
 		38960C51263FEC6D0006FA14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38960C50263FEC6D0006FA14 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		00367EE62641921D00311DCE /* surfData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = surfData.json; sourceTree = "<group>"; };
+		007F96362642E4FA009777D0 /* surfData2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = surfData2.json; sourceTree = "<group>"; };
 		38960C49263FEC6B0006FA14 /* AsanoSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsanoSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38960C4C263FEC6B0006FA14 /* AsanoSurfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanoSurfApp.swift; sourceTree = "<group>"; };
 		38960C4E263FEC6B0006FA14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				38960CAF264141EF0006FA14 /* SpotModel.swift */,
 				38960CB1264144C80006FA14 /* DataProvider.swift */,
 				00367EE62641921D00311DCE /* surfData.json */,
+				007F96362642E4FA009777D0 /* surfData2.json */,
 			);
 			path = AsanoSurf;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			files = (
 				38960C54263FEC6D0006FA14 /* Preview Assets.xcassets in Resources */,
 				38960C51263FEC6D0006FA14 /* Assets.xcassets in Resources */,
+				007F96372642E4FA009777D0 /* surfData2.json in Resources */,
 				00367EE72641921D00311DCE /* surfData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
