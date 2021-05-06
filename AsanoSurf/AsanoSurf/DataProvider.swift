@@ -8,6 +8,7 @@
 import Foundation
 
 
+
 func load2(_ filename: String) -> Record{
     let data: Data
 
@@ -34,10 +35,13 @@ func load2(_ filename: String) -> Record{
 
 
 
+
 class DataProvider {
-    var recordsListSpot :[Spot] = load2("surfData2.json").records
+    var recordsListSpot :[Spot] = load2("surfData.json").records
+    
 }
 
 struct Record : Decodable {
     var records: [Spot]
 }
+

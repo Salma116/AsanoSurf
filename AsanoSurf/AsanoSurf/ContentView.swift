@@ -13,23 +13,23 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(uiImage : spot.image.loadImage())
+            Image(uiImage : spot.fields.photos[0].urlPhoto.loadImage())
                 .resizable()
                 .scaledToFit()
                 .frame(height:300)
             
-            Text(spot.name)
-                .font(.title)
-            Text(spot.location)
+                Text(spot.fields.name[0])
+                    .font(.title)
+            
+            HStack {
+                Text("Niveau de difficulté : ")
+            Text(String(spot.fields.level))
+                .padding()
+            }
+            Text(spot.fields.previsionLink)
                 .padding()
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ContentView(spot: Spot(image: "surf", name: "surf", location: "surf"))
-        }
-    }
-}
+
