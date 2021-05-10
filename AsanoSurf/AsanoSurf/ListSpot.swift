@@ -27,13 +27,14 @@ extension String {
 }
 
 struct ListSpot: View {
-    @ObservedObject var viewModel : ViewModel = ViewModel()
+   // @ObservedObject var viewModel : ViewModel = ViewModel()
+    @State var spots:[Spot] = []
     
     var body: some View {
 
         NavigationView {
             List{
-                ForEach(self.viewModel.spots, id:\.self){ sp in
+                ForEach(spots, id:\.self){ sp in
                   
                     NavigationLink(
                         destination: ContentView(spot: sp),
@@ -53,15 +54,17 @@ struct ListSpot: View {
                    
                 }
             }
-            .navigationTitle("Liste des spots")
+            
+            .onAppear(){
+                DataProvider().apiCall { (spots) in
+                    self.spots = spots
+
+                }
+            }.navigationTitle("Liste des spots")
         }
     }
 }
 
 
 
-struct ListSpot_Previews: PreviewProvider {
-    static var previews: some View {
-        ListSpot()
-    }
-}
+

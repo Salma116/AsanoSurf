@@ -3,10 +3,10 @@
 //  AsanoSurf
 //
 //  Created by Salma ElMourabet on 04/05/2021.
+//  Apikey = keyw35g3YFNptmLBx
 //
 
 import Foundation
-
 
 
 func load2(_ filename: String) -> Record{
@@ -37,7 +37,35 @@ func load2(_ filename: String) -> Record{
 
 
 class DataProvider {
-    var recordsListSpot :[Spot] = load2("surfData.json").records
+    
+    func apiCall(completion:@escaping ([Spot]) -> ()) {
+        guard let url = URL(string: "https://api.airtable.com/v0/appxT9ln6ixuCb3o1/Surf%20Destinations?api_key=keyw35g3YFNptmLBx") else {
+            print("Invalid URL")
+            return
+        }
+        
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                if let decodedResponse = try? JSONDecoder().decode(Record.self, from: data) {
+                    // we have good data – go back to the main thread
+                    DispatchQueue.main.async {
+                        // update our UI
+                        completion(decodedResponse.records)
+                        
+                    }
+
+                    // everything is good, so we can exit
+                    return
+                    
+                }
+            }
+        }.resume()
+        
+        
+    }
+   // var recordsListSpot :[Spot] = []
+    
     
 }
 
