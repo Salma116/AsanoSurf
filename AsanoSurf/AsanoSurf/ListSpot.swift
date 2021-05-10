@@ -63,8 +63,8 @@ struct ListSpot: View {
             }.navigationTitle("Liste des spots")
         }
     }
-}
 
+}
 
 
 

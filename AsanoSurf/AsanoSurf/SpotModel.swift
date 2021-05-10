@@ -34,7 +34,6 @@ struct Spotfield : Hashable, Decodable {
 
 
 struct Spot : Hashable, Decodable {
-    var id:String
     var fields: Spotfield
 }
 
