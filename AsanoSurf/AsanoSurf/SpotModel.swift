@@ -12,7 +12,7 @@ struct Photo : Hashable, Decodable {
         case urlPhoto = "url"
     }
     
-    var urlPhoto:String
+    var urlPhoto:String = "https://media.istockphoto.com/photos/standing-tall-picture-id143918363?k=6&m=143918363&s=612x612&w=0&h=L9Ia9LQs0w1LnDcNRwU_FMI_bADnw366GFBtVpVAq7k="
     
 }
 
@@ -27,7 +27,7 @@ struct Spotfield : Hashable, Decodable {
     
     var name:[String] = [""]
     var level:Int = 1
-    var previsionLink:String
+    var previsionLink:String = ""
     var photos:[Photo]
     
 }
