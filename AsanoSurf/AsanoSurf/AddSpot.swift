@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct AddSpot: View {
+    func createSpot(){
+        
+    }
+    var spot = Spot(fields: Spotfield())
     @State var name: String = ""
     @State var level: Int = 2
     var levels = [1, 2, 3, 4, 5]
@@ -15,7 +19,7 @@ struct AddSpot: View {
         NavigationView{
         Form {
             Section {
-                TextField("Nom du spot", text: $name)
+                TextField("Nom du spot", text: $name )
                 Picker("Difficulté", selection: $level, content: {
                                    ForEach(levels, id: \.self) {level in
                                     Text(String(level))
@@ -25,6 +29,8 @@ struct AddSpot: View {
 
             Section {
                 Button("Ajouter le spot") {
+                    spot.fields.name[0] = $name
+                    self.createSpot()
                     print("Creating account…")
                 }
             }

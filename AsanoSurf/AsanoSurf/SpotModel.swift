@@ -25,8 +25,8 @@ struct Spotfield : Hashable, Decodable {
         case photos = "Photos"
     }
     
-    var name:[String]
-    var level:Int
+    var name:[String] = [""]
+    var level:Int = 1
     var previsionLink:String
     var photos:[Photo]
     
