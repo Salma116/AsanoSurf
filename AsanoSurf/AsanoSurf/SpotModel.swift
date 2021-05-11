@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Photo : Hashable, Decodable {
+struct Photo : Hashable, Decodable, Encodable {
     enum CodingKeys: String, CodingKey {
         case urlPhoto = "url"
     }
@@ -16,7 +16,7 @@ struct Photo : Hashable, Decodable {
     
 }
 
-struct Spotfield : Hashable, Decodable {
+struct Spotfield : Hashable, Decodable, Encodable {
     
     enum CodingKeys: String, CodingKey {
         case name = "Surf Break"
@@ -33,7 +33,7 @@ struct Spotfield : Hashable, Decodable {
 }
 
 
-struct Spot : Hashable, Decodable {
+struct Spot : Hashable, Decodable, Encodable {
     var fields: Spotfield
 }
 

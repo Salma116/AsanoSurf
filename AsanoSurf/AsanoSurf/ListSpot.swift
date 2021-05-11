@@ -44,7 +44,7 @@ struct ListSpot: View {
                                     .resizable()
                                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                                     .scaledToFit()
-                                    .frame(height: 40)
+                                    .frame(width: 50, height: 50)
                                
                                 Text(sp.fields.name[0])
                             }
